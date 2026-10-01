@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="app_name">Hammer</string>
+
+	<string name="save_all_toast">已保存所有场景</string>
+
+	<string name="unsaved_scenes_dialog_title">未保存的场景</string>
+	<string name="unsaved_scenes_dialog_message">未保存的场景应该如何处理？</string>
+
+	<string name="unsaved_encyclopedia_dialog_title">未保存的百科条目</string>
+	<string name="unsaved_encyclopedia_dialog_message">丢弃该条目？</string>
+
+	<string name="unsaved_notes_dialog_title">未保存的笔记</string>
+	<string name="unsaved_notes_dialog_message">丢弃该笔记？</string>
+
+	<string name="unsaved_timeline_dialog_title">未保存的时间线事件</string>
+	<string name="unsaved_timeline_dialog_message">丢弃该事件？</string>
+
+	<string name="unsaved_dialog_negative_button">取消</string>
+	<string name="unsaved_dialog_positive_button">丢弃并关闭</string>
+
+	<string name="unsaved_entity_dialog_negative_button">丢弃</string>
+	<string name="unsaved_entity_dialog_neutral_button">取消</string>
+	<string name="unsaved_entity_dialog_positive_button">保存</string>
+
+	<string name="close_dialog_button">关闭</string>
+	<string name="more_menu_button">更多</string>
+
+	<string name="network_request_failure_parse_body">解析响应正文失败：%1$s</string>
+
+	<string name="confirm_dialog_positive">是</string>
+	<string name="confirm_dialog_negative">否</string>
+
+
+	<string name="expand">展开</string>
+	<string name="collapse">折叠</string>
+
+	<string name="markdown_format_bar_decrease_text_size">减小字号</string>
+	<string name="markdown_format_bar_increase_text_size">增大字号</string>
+	<string name="markdown_format_bar_reset_text_size">重置字号</string>
+	<string name="markdown_format_bar_find_replace">查找和替换</string>
+
+	<string name="markdown_format_bar_bold">粗体</string>
+	<string name="markdown_format_bar_italic">斜体</string>
+	<string name="markdown_format_bar_strikethrough">删除线</string>
+	<string name="markdown_format_bar_heading">标题</string>
+	<string name="markdown_format_bar_blockquote">引用</string>
+	<string name="markdown_format_bar_bullet_list">无序列表</string>
+	<string name="markdown_format_bar_numbered_list">有序列表</string>
+	<string name="markdown_format_bar_horizontal_rule">水平分隔线</string>
+	<string name="markdown_format_bar_undo">撤销</string>
+	<string name="markdown_format_bar_redo">重做</string>
+	<string name="form_dialog_keyboard_hint">ESC 取消</string>
+</resources>

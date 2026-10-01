@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="account_settings_breadcrumb">账号</string>
+	<string name="account_settings_subtitle_local_install">本地安装</string>
+	<string name="account_settings_folio_caption">账号设置</string>
+	<string name="settings_backups_header">备份</string>
+	<string
+		name="settings_backups_explainations">该备份系统用于防止数据丢失和损坏。它并不是用来保留故事的旧版本。请改用草稿系统来实现这个目的。</string>
+	<string name="settings_backups_manage_button">管理备份</string>
+	<string name="settings_theme_label">界面主题</string>
+	<string name="settings_theme_light">浅色</string>
+	<string name="settings_theme_dark">深色</string>
+	<string name="settings_theme_followsystem">跟随系统</string>
+	<string name="settings_initial_screen_label">启动时的项目界面</string>
+	<string name="settings_initial_screen_home">主页</string>
+	<string name="settings_initial_screen_editor">场景编辑器</string>
+	<string name="settings_projects_directory">项目目录</string>
+	<string name="settings_projects_directory_description">设置 Hammer 用于存放项目数据的目录。</string>
+	<string name="settings_projects_directory_button">选择目录</string>
+	<string name="settings_example_project_header">示例项目</string>
+	<string
+		name="settings_example_project_description">安装一个示例项目，了解各项功能的使用方式。</string>
+	<string name="settings_example_project_button">重新安装</string>
+	<string name="settings_example_project_success_message">示例项目已创建。</string>
+	<string name="settings_server_status_connected">已连接</string>
+	<string name="settings_server_status_not_connected">未连接</string>
+	<string name="settings_server_url_greeble">URL</string>
+	<string name="settings_server_help_link">帮助 ↗</string>
+	<string name="settings_server_description">配置数据同步</string>
+	<string name="settings_server_setup_button">设置</string>
+	<string name="settings_server_auto_sync">自动同步</string>
+	<string name="settings_server_sync_backup">同步时备份</string>
+	<string name="settings_server_sync_auto_close">成功时关闭同步对话框</string>
+	<string name="settings_server_max_backups">每个项目的最大备份数</string>
+	<string name="settings_server_max_backups_error">必须在 1 到 %1$d 之间</string>
+	<string name="settings_server_remove_server_button">移除服务器</string>
+	<string name="settings_remove_server_dialog_title">移除服务器</string>
+	<string name="settings_remove_server_dialog_message">你确定要移除该服务器吗？</string>
+	<string name="settings_server_setup_title">设置服务器</string>
+	<string name="settings_server_setup_url_hint">服务器地址：hammer.ink</string>
+	<string name="settings_server_setup_insecure_warning">纯 HTTP：你的电子邮件、密码和写作内容将以未加密方式传输。请仅在可信的网络上使用。</string>
+	<string name="settings_server_setup_email_hint">电子邮件：user@example.com</string>
+	<string name="settings_server_setup_password_hint">密码</string>
+	<string name="settings_server_setup_password_requirements">%1$d-%2$d 个字符</string>
+	<string name="settings_server_setup_password_show">显示密码</string>
+	<string name="settings_server_setup_password_hide">隐藏密码</string>
+	<string name="settings_server_setup_login_button">登录</string>
+	<string name="settings_server_setup_create_button">创建</string>
+	<string name="settings_server_setup_cancel_button">取消</string>
+	<string name="merge_projects_dialog_title">要与服务器合并现有项目吗？</string>
+	<string name="merge_projects_mode_label">项目数据</string>
+	<string name="merge_projects_mode_merge">合并</string>
+	<string name="merge_projects_mode_replace">替换</string>
+	<string name="merge_projects_explain_merge">Hammer 会按名称将你的本地项目与服务器上已有的项目进行匹配。仅存在于服务器上的项目会被下载，仅存在于本设备上的项目会被上传。</string>
+	<string name="merge_projects_explain_replace">你所有的本地项目都将被删除，并替换为服务器上的内容。</string>
+	<string name="merge_projects_continue_button">继续</string>
+	<string name="merge_projects_replace_confirm_title">删除所有本地项目？</string>
+	<string name="merge_projects_replace_confirm_message">这将永久删除本设备上的每个项目，并用服务器上的项目替换它们。此操作无法撤销。</string>
+	<string name="merge_projects_replace_confirm_button">删除并替换</string>
+	<string name="settings_platform_settings_title">平台设置</string>
+	<string name="settings_platform_settings_empty">没有平台专属设置。</string>
+	<string name="settings_keep_screen_on">保持屏幕常亮</string>
+	<string name="settings_enable_dnd_focus_mode_title">进入专注模式时启用请勿打扰</string>
+	<string name="settings_dnd_permission_button">授予请勿打扰权限</string>
+	<string
+		name="settings_dnd_permission_explanation">Hammer 需要权限才能在你进入专注模式时启用请勿打扰模式。</string>
+	<string name="settings_storage_public_label">将项目存储在公共存储中</string>
+	<string
+		name="settings_storage_public_hint">将项目保存在共享的 Documents 文件夹中，以便其他应用和文件管理器都能访问。</string>
+	<string name="settings_storage_location_label">项目位置</string>
+	<string
+		name="settings_storage_permission_explanation">Hammer 需要文件访问权限才能将项目存储在公共存储中。</string>
+	<string name="settings_storage_permission_button">授予文件访问权限</string>
+
+	<string name="notice_experimental_label">实验性</string>
+	<string name="settings_spellcheck_heading">拼写检查</string>
+	<string name="settings_spellcheck_notice">如果它引起问题，直接关掉即可。</string>
+	<string name="settings_spellcheck_enable">启用拼写检查</string>
+	<string name="settings_spellcheck_in_focus_enable">在专注模式下启用</string>
+	<string name="settings_spellcheck_encyclopedia_enable">学习百科名称</string>
+	<string name="settings_spellcheck_encyclopedia_enable_hint">在其所属项目打开期间，条目名称和别名不会被标记为拼写错误</string>
+	<string name="settings_spellcheck_dictionary">词典</string>
+	<string name="settings_spellcheck_dictionary_android_info_title">拼写检查语言</string>
+	<string name="settings_spellcheck_dictionary_android_info_message">在 Android 上，拼写检查语言由你的设备而非应用决定。要更改它，请在 Android 设置中更新系统语言和键盘语言。</string>
+	<string
+		name="settings_server_enable_sync_backup_desc">设置一个服务器，在各设备间同步你的项目并创建安全备份。</string>
+	<string name="settings_server_sync_backup_preferences">同步与备份偏好设置</string>
+	<string name="settings_server_danger_zone">危险区域</string>
+
+	<!-- Backup Manager Dialog -->
+	<string name="backup_manager_error_load_backups">无法加载备份：%1$s</string>
+	<string name="backup_manager_error_load_project_backups">无法加载该项目的备份：%1$s</string>
+	<string name="backup_manager_error_delete_backup">无法删除备份：%1$s</string>
+	<string name="backup_restore_dialog_title">恢复备份</string>
+	<string
+		name="backup_restore_dialog_message">警告：恢复此备份将完全替换项目的当前内容。所有现有文件都将被删除，并替换为备份数据。此操作无法撤销。</string>
+	<string name="backup_restore_dialog_confirm">恢复</string>
+	<string name="backup_restore_dialog_cancel">取消</string>
+	<string name="backup_manager_title">管理备份</string>
+	<string name="backup_manager_no_backups">未找到备份</string>
+	<string name="backup_manager_select_project_hint">选择一个项目</string>
+	<string name="backup_manager_no_backups_for_project">该项目没有备份</string>
+	<string name="backup_manager_restore_button">恢复</string>
+	<string name="backup_manager_delete_button">删除备份</string>
+	<string name="backup_manager_show_button">在文件夹中显示</string>
+	<string name="backup_manager_export_button">导出</string>
+	<string name="account_sync_confirm_cancel_title">取消同步？</string>
+	<string name="account_sync_confirm_cancel_message">你确定要取消同步吗？</string>
+	<string name="account_sync_toast_canceled">同步已取消</string>
+
+	<!-- Server Setup Validation Errors -->
+	<string name="server_setup_error_unknown">发生了意外错误。请重试。</string>
+	<string
+		name="server_setup_error_invalid_url">服务器地址无效。请输入类似「hammer.ink」的地址或 IP 地址。</string>
+	<string name="server_setup_error_invalid_email">请输入有效的电子邮件地址。</string>
+	<string name="server_setup_error_password_too_short">密码至少需要 8 个字符。</string>
+	<string name="server_setup_error_password_too_long">密码最多只能有 64 个字符。</string>
+	<string name="server_setup_error_password_no_uppercase">密码必须至少包含一个大写字母。</string>
+	<string name="server_setup_error_password_no_lowercase">密码必须至少包含一个小写字母。</string>
+	<string name="server_setup_error_password_no_number">密码必须至少包含一个数字。</string>
+	<string name="server_setup_error_password_no_special">密码必须至少包含一个特殊字符。</string>
+
+	<!-- Server Setup Toast Messages -->
+	<string name="settings_server_setup_toast_success">服务器设置成功！</string>
+	<string name="settings_server_setup_toast_failure">服务器设置失败：%1$s</string>
+	<string
+		name="settings_server_setup_toast_failure_unknown">服务器设置失败。请检查你的连接后重试。</string>
+
+	<!-- Terms of Service -->
+	<string name="settings_server_tos_title">服务条款</string>
+	<string name="settings_server_tos_accept">接受</string>
+	<string name="settings_server_tos_decline">拒绝</string>
+	<string name="settings_server_tos_declined">你必须接受服务条款才能创建账号。</string>
+
+	<!-- Network Errors -->
+	<string
+		name="server_error_connection_timeout">无法连接到服务器。请确认服务器正在运行且地址正确。</string>
+	<string name="server_error_timeout">服务器没有响应。请检查你的网络连接后重试。</string>
+	<string name="server_error_dns">未找到服务器。请检查服务器地址和网络连接。</string>
+	<string
+		name="server_error_connection_generic">连接到 %1$s 时发生网络错误。请检查你的连接后重试。</string>
+	<string name="server_error_tls">无法与 %1$s 建立安全连接。Hammer 仅通过 HTTPS 连接，因此服务器需要拥有有效的 TLS 证书，或使用能提供该证书的反向代理。</string>
+	<string name="server_error_network_unavailable">Hammer 无法在此设备上建立网络连接，因此请求未能到达服务器。可能是安全软件、VPN 或防火墙将其阻止。</string>
+
+</resources>

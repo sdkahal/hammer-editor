@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="notes_header">笔记</string>
+	<string name="notes_list_empty">未找到笔记</string>
+	<string name="notes_create_note_button">新建笔记</string>
+	<string name="notes_note_item_action_cancel">取消</string>
+	<string name="notes_discard_dialog_title">放弃更改？</string>
+	<string name="notes_discard_dialog_message">你所做的更改将会丢失。</string>
+	<string name="notes_create_header">新建笔记</string>
+	<string name="notes_create_marker">III · 新建</string>
+	<string name="notes_create_draft_label">草稿</string>
+	<string name="notes_create_create_button">创建</string>
+	<string name="notes_create_cancel_button">取消</string>
+	<string name="notes_create_toast_success">笔记已创建</string>
+	<string name="notes_create_toast_too_long">笔记内容过长</string>
+	<string name="notes_create_toast_empty">笔记内容为空</string>
+	<string name="notes_create_toast_tag_too_long">标签过长（最多 %1$d 个字符）</string>
+	<string name="notes_create_tags_label">标签</string>
+	<string name="notes_create_tags_hint">↵ 添加</string>
+	<string name="notes_create_tags_placeholder">灵感，待办，后续…</string>
+	<string name="notes_delete_title">删除笔记？</string>
+	<string name="notes_delete_message">此操作无法撤销！</string>
+	<string name="notes_delete_toast_success">笔记已删除</string>
+
+	<string name="notes_menu_group">笔记</string>
+	<string name="notes_menu_delete">删除</string>
+
+	<string name="notes_view_header">笔记</string>
+	<string name="notes_view_label_editing">编辑中</string>
+	<string name="notes_view_close_button">关闭笔记</string>
+	<string name="notes_view_crumb_root">笔记</string>
+	<string name="notes_view_action_edit">编辑</string>
+	<string name="notes_view_action_save">保存</string>
+	<string name="notes_view_status_unsaved">未保存</string>
+	<string name="notes_view_status_word_char">%1$d 字 · %2$d 字符</string>
+	<string name="notes_view_status_hint">ESC 取消</string>
+
+	<string name="notes_search_button">搜索笔记</string>
+	<string name="notes_search_placeholder">搜索笔记</string>
+	<string name="notes_search_close">关闭搜索</string>
+	<string name="notes_search_clear">清除搜索</string>
+
+	<string name="notes_header_meta">%1$d 条笔记 · %2$d 个标签</string>
+	<string name="notes_word_count_short">%1$d 字</string>
+	<string name="notes_filter_all">全部</string>
+	<string name="notes_filter_filtered">已筛选 · %2$d 中的 %1$d</string>
+	<string name="notes_filter_clear_all">清除全部</string>
+	<string name="notes_sort_label">排序</string>
+	<string name="notes_sort_newest">最新</string>
+	<string name="notes_sort_oldest">最早</string>
+	<string name="notes_sort_longest">最长</string>
+	<string name="notes_sort_shortest">最短</string>
+	<string name="notes_sort_title_az">标题 A–Z</string>
+	<string name="notes_sort_glyph_date_desc">↓ 日期</string>
+	<string name="notes_sort_glyph_date_asc">↑ 日期</string>
+	<string name="notes_sort_glyph_words_desc">↓ 字数</string>
+	<string name="notes_sort_glyph_words_asc">↑ 字数</string>
+	<string name="notes_sort_glyph_title_az">↓ A–Z</string>
+</resources>

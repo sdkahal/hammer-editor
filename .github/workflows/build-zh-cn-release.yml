@@ -1,0 +1,241 @@
+name: Build zh-CN Release
+
+# 从本分支取翻译文件，拉取上游 Darkrock-Studios/hammer-editor 的源码，叠加翻译后
+# 构建 Android APK 与 Windows 安装包，并发布到本 fork 的 Release。
+#
+# 触发 push 而非 tag：Release 由本工作流自己用 gh 创建，tag 名刻意用 `zhcn-` 前缀，
+# 避免 `v*` 命中上游继承来的 prepare-release.yml（on: push: tags: v*）而触发全平台打包。
+
+on:
+  push:
+    branches: [ "i18n/zh-cn" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  UPSTREAM_REPO: Darkrock-Studios/hammer-editor
+  UPSTREAM_REF: develop
+
+jobs:
+  # 花几分钟构建之前先花几秒验证翻译文件：XML 能否解析、key 是否与英文源一一对应。
+  # 上游新增 string 后本分支的翻译会缺 key，此时在这里报出来，而不是等到成品里
+  # 静默回退成英文。
+  verify:
+    name: Verify translations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Checkout upstream source
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.UPSTREAM_REPO }}
+          ref: ${{ env.UPSTREAM_REF }}
+          path: src
+          fetch-depth: 1
+
+      - name: Check translation files against upstream source
+        run: python3 .github/scripts/verify-translations.py i18n/zh-CN src
+
+  android:
+    name: Android APK
+    runs-on: ubuntu-latest
+    needs: verify
+    steps:
+      - name: Checkout translations
+        uses: actions/checkout@v7
+        with:
+          path: i18n-src
+
+      - name: Checkout upstream source
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.UPSTREAM_REPO }}
+          ref: ${{ env.UPSTREAM_REF }}
+          path: src
+          fetch-depth: 1
+
+      # 两棵目录树结构一致，整目录覆盖即可，无需逐文件映射。
+      - name: Overlay translations onto upstream source
+        run: |
+          cp -r i18n-src/i18n/zh-CN/. src/
+          ls src/common/src/commonMain/composeResources/values-zh-rCN/
+          ls src/android/src/main/res/values-zh-rCN/
+
+      - name: set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Gradle caching
+        uses: actions/cache@v6
+        with:
+          path: |
+            src/.gradle
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-zh-cn-android-${{ hashFiles('src/**/*.gradle*', 'src/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-zh-cn-android-
+
+      # 自建 keystore，与官方签名不同：无法覆盖安装官方版，装前需先卸载官方 Hammer。
+      - name: Restore signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEY_KEYSTORE_BASE64 }}
+        run: |
+          test -n "$KEYSTORE_BASE64" || { echo "::error::KEY_KEYSTORE_BASE64 is not set"; exit 1; }
+          printf '%s' "$KEYSTORE_BASE64" | base64 -d > src/release.keystore
+          keytool -list -keystore src/release.keystore -storepass "${{ secrets.KEY_STORE_PASSWORD }}" \
+            -alias "${{ secrets.KEY_KEY_ALIAS }}" > /dev/null
+
+      # 刻意不加 -Pfdroid=true：settings.gradle.kts 在 fdroid 模式下会把 :desktop
+      # 整个移出模块列表，那样 windows job 就构建不出安装包了。
+      # BUILD_NUMBER 用 run_number，保证每次构建的 versionCode 递增（可覆盖安装上一版）。
+      - name: Build release APK
+        env:
+          RELEASE_STORE_FILE: ${{ github.workspace }}/src/release.keystore
+          RELEASE_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.KEY_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.KEY_KEY_PASSWORD }}
+          BUILD_NUMBER: ${{ github.run_number }}
+        run: |
+          cd src
+          chmod +x gradlew
+          ./gradlew :android:assembleRelease
+
+      - name: Collect artifacts
+        run: |
+          set -euo pipefail
+          cd src/android/build/outputs
+          mapfile -t apks < <(find apk/release -name '*.apk')
+          if [ "${#apks[@]}" -eq 0 ]; then echo "::error::no APK produced"; exit 1; fi
+          if [ "${#apks[@]}" -gt 1 ]; then
+            echo "::error::expected exactly one APK, got ${#apks[@]}: ${apks[*]}"
+            exit 1
+          fi
+          mkdir -p "$GITHUB_WORKSPACE/dist"
+          cp "${apks[0]}" "$GITHUB_WORKSPACE/dist/hammer.apk"
+          cp mapping/release/mapping.txt "$GITHUB_WORKSPACE/dist/hammer-apk-mapping.txt"
+          ls -la "$GITHUB_WORKSPACE/dist"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: android-apk
+          path: dist/
+          if-no-files-found: error
+
+  windows:
+    name: Windows installers
+    runs-on: windows-latest
+    needs: verify
+    steps:
+      - name: Checkout translations
+        uses: actions/checkout@v7
+        with:
+          path: i18n-src
+
+      - name: Checkout upstream source
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.UPSTREAM_REPO }}
+          ref: ${{ env.UPSTREAM_REF }}
+          path: src
+          fetch-depth: 1
+
+      - name: Overlay translations onto upstream source
+        shell: pwsh
+        run: Copy-Item -Path i18n-src/i18n/zh-CN/* -Destination src/ -Recurse -Force
+
+      - name: set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Gradle caching
+        uses: actions/cache@v6
+        with:
+          path: |
+            src/.gradle
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-zh-cn-windows-${{ hashFiles('src/**/*.gradle*', 'src/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-zh-cn-windows-
+
+      # jpackage 自带 WiX，不需要任何 secret。产物未签名，Windows SmartScreen 会警告。
+      - name: Package .msi and .exe
+        uses: nick-fields/retry@ad984534de44a9489a53aefd81eb77f87c70dc60 # v4.0.0
+        with:
+          timeout_minutes: 30
+          max_attempts: 3
+          shell: pwsh
+          command: |
+            cd src
+            ./gradlew.bat :desktop:packageReleaseMsi -Pchannel=github
+            ./gradlew.bat :desktop:packageReleaseExe -Pchannel=github
+
+      - name: Collect artifacts
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $dist = "$env:GITHUB_WORKSPACE\dist"
+          New-Item -ItemType Directory -Force -Path $dist | Out-Null
+          $base = "src\desktop\build\installers\main-release"
+
+          # Select-Object -First 1 匹配不到时返回 $null，Copy-Item 会静默跳过，
+          # 结果是 upload-artifact 报 "no files found" 而不是指到真正的原因。
+          foreach ($pair in @(@("msi", "hammer.msi"), @("exe", "hammer.exe"))) {
+            $found = Get-ChildItem "$base\$($pair[0])\hammer-*.$($pair[0])" -ErrorAction SilentlyContinue
+            if (-not $found) { throw "no $($pair[0]) produced in $base\$($pair[0])" }
+            Copy-Item ($found | Select-Object -First 1) "$dist\$($pair[1])"
+          }
+
+          Get-ChildItem $dist
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: windows-installers
+          path: dist/
+          if-no-files-found: error
+
+  release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    needs: [ android, windows ]
+    permissions:
+      contents: write
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v8
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPSTREAM_REPO: ${{ env.UPSTREAM_REPO }}
+          UPSTREAM_REF: ${{ env.UPSTREAM_REF }}
+          # 刻意不用 `v` 前缀：上游继承来的 prepare-release.yml 监听 `v*` tag，
+          # 撞上就会触发全平台打包并因缺 secret 全部失败。
+          TAG: zhcn-${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          {
+            printf '上游 `%s` @ `%s`，叠加本分支的 zh-CN 翻译。\n\n' "$UPSTREAM_REPO" "$UPSTREAM_REF"
+            printf 'Android APK 使用自建 keystore 签名，与官方签名不同，**无法覆盖安装官方版**，首次安装请先卸载官方 Hammer。\n'
+            printf 'Windows 安装包未做代码签名，SmartScreen 可能弹出警告。\n'
+          } > notes.md
+          gh release create "$TAG" dist/* \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "Hammer 简体中文版 build ${{ github.run_number }}" \
+            --notes-file notes.md

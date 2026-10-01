@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="project_select_nav_story_ideas">故事灵感</string>
+	<string name="project_select_nav_story_ideas_short">灵感</string>
+
+	<string name="ideas_header">故事灵感</string>
+	<string name="ideas_header_meta">%1$d 条灵感 · %2$d 个标签</string>
+	<string name="ideas_list_empty">还没有故事灵感。记录下你最初的火花吧。</string>
+	<string name="ideas_list_empty_archived">没有已归档的灵感。</string>
+	<string name="ideas_word_count_short">%1$d 字</string>
+	<string name="ideas_tag_count_short">%1$d 个标签</string>
+
+	<string name="ideas_search_placeholder">搜索灵感</string>
+	<string name="ideas_search_button">搜索灵感</string>
+	<string name="ideas_search_clear">清除搜索</string>
+	<string name="ideas_search_close">关闭搜索</string>
+
+	<string name="ideas_filter_all">全部</string>
+	<string name="ideas_filter_archived">已归档</string>
+	<string name="ideas_filter_filtered">已筛选 %1$d / %2$d</string>
+	<string name="ideas_filter_clear_all">清除全部</string>
+
+	<string name="ideas_sort_label">排序</string>
+	<string name="ideas_sort_newest">最新</string>
+	<string name="ideas_sort_oldest">最早</string>
+	<string name="ideas_sort_title_az">标题 A–Z</string>
+	<string name="ideas_sort_glyph_date_desc">↓ 日期</string>
+	<string name="ideas_sort_glyph_date_asc">↑ 日期</string>
+	<string name="ideas_sort_glyph_title_az">↓ A–Z</string>
+
+	<string name="ideas_stamp_promoted">已提升 · %1$s</string>
+	<string name="ideas_stamp_archived">已归档 · %1$s</string>
+
+	<string name="ideas_create_fab">记录新灵感</string>
+	<string name="ideas_create_marker">新灵感</string>
+	<string name="ideas_view_header">故事灵感</string>
+	<string name="ideas_view_label_editing">编辑中</string>
+	<string name="ideas_view_status_unsaved">未保存</string>
+	<string name="ideas_view_crumb_root">故事灵感</string>
+	<string name="ideas_view_close_button">关闭灵感</string>
+	<string name="ideas_view_action_edit">编辑</string>
+	<string name="ideas_title_label">标题</string>
+	<string name="ideas_title_placeholder">标题（可选）</string>
+	<string name="ideas_tags_label">标签</string>
+	<string name="ideas_tags_hint">输入内容或用逗号添加标签</string>
+	<string name="ideas_tags_placeholder">添加标签…</string>
+	<string name="ideas_editor_counter">%1$d / %2$d 字符</string>
+	<string name="ideas_create_button">创建</string>
+	<string name="ideas_save_button">保存</string>
+	<string name="ideas_cancel_button">取消</string>
+	<string name="ideas_delete_button">删除</string>
+	<string name="ideas_archive_button">归档</string>
+	<string name="ideas_unarchive_button">取消归档</string>
+
+	<string name="ideas_toast_created">灵感已记录</string>
+	<string name="ideas_toast_saved">灵感已保存</string>
+	<string name="ideas_toast_deleted">灵感已删除</string>
+	<string name="ideas_toast_archived">灵感已归档</string>
+	<string name="ideas_toast_unarchived">灵感已取消归档</string>
+	<string name="ideas_toast_empty">灵感内容不能为空</string>
+	<string name="ideas_toast_too_long">灵感内容过长：最多 %1$d 个字符</string>
+	<string name="ideas_toast_tag_too_long">标签最多只能有 %1$d 个字符</string>
+
+	<string name="ideas_promote_button">创建项目</string>
+	<string name="ideas_promote_dialog_title">从灵感创建项目</string>
+	<string name="ideas_promote_dialog_message">将创建一个新项目，并把这条灵感作为它的第一条笔记添加进去。</string>
+	<string name="ideas_toast_promoted">项目已创建：%1$s</string>
+	<string name="ideas_toast_promote_failed">创建项目失败</string>
+
+	<string name="ideas_delete_dialog_title">删除灵感</string>
+	<string name="ideas_delete_dialog_message">该灵感将被永久删除，且无法撤销。</string>
+	<string name="ideas_discard_dialog_title">放弃更改</string>
+	<string name="ideas_discard_dialog_message">你有未保存的更改。要放弃吗？</string>
+
+	<string name="sync_log_ideas_begin">正在同步故事灵感</string>
+	<string name="sync_log_ideas_unchanged">故事灵感未更改 — 已跳过</string>
+	<string name="sync_log_ideas_complete">故事灵感同步完成</string>
+	<string name="sync_log_ideas_state_failed">获取故事灵感状态失败：%1$s</string>
+	<string name="sync_log_ideas_deleted_local">已移除被删除的灵感：%1$s</string>
+	<string name="sync_log_ideas_deleted_server">已将灵感删除同步到服务器：%1$s</string>
+	<string name="sync_log_ideas_delete_server_failed">在服务器上删除灵感失败：%1$s</string>
+	<string name="sync_log_ideas_uploaded">已上传灵感：%1$s</string>
+	<string name="sync_log_ideas_upload_failed">上传灵感「%1$s」失败：%2$s</string>
+	<string name="sync_log_ideas_downloaded">已下载灵感：%1$s</string>
+	<string name="sync_log_ideas_download_failed">下载灵感 %1$s 失败：%2$s</string>
+	<string name="sync_log_ideas_conflict">检测到灵感冲突：%1$s</string>
+	<string name="sync_log_ideas_conflict_resolved">已解决灵感冲突：%1$s</string>
+	<string name="sync_log_ideas_conflict_skipped">灵感冲突未解决：%1$s</string>
+
+	<string name="ideas_conflict_title">故事灵感冲突</string>
+	<string name="ideas_conflict_field_title">标题</string>
+	<string name="ideas_conflict_field_tags">标签</string>
+	<string name="ideas_conflict_field_content">正文</string>
+</resources>

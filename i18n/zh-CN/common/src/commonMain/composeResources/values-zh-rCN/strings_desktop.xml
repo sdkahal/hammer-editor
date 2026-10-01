@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="account_window_title">Hammer - 项目选择</string>
+
+	<string name="project_window_title">Hammer - %1$s</string>
+	<string name="project_window_menu_file">文件</string>
+	<string name="project_window_menu_item_close">关闭项目</string>
+	<string name="project_window_menu_item_exit">退出</string>
+
+	<string name="jump_list_recent_projects">最近的项目</string>
+
+	<!-- Sandbox first-run projects-directory flow (Mac App Store builds) -->
+	<string name="sandbox_intro_title">欢迎使用 Hammer</string>
+	<string name="sandbox_intro_message">Hammer 会把你的项目存放在你自己选择的文件夹里，让你的写作始终掌握在自己手中。\n\n在接下来的界面中，选择一个已有的 hammer 项目文件夹，或者新建一个。之后你可以在设置中更改。</string>
+	<string name="sandbox_picker_title">选择 Hammer 项目的存放位置</string>
+	<string name="sandbox_choose_folder_button">选择文件夹</string>
+	<string name="sandbox_quit_button">退出</string>
+	<string name="sandbox_retry_message">Hammer 需要一个文件夹来存放你的项目。\n请现在选择一个文件夹，或者退出。</string>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="wear_pairing_masthead">配对手表</string>
+	<string name="wear_pairing_title">以 %1$s 的身份登录 Hammer？</string>
+	<string name="wear_pairing_body">手表将以 %1$s 的身份同步，并拥有独立的会话。你可以随时在手表上退出登录。</string>
+	<string name="wear_pairing_not_signed_in">请先在此手机上登录同步服务器，然后重新配对手表。</string>
+	<string name="wear_pairing_approve">配对</string>
+	<string name="wear_pairing_decline">拒绝</string>
+	<string name="wear_pairing_close">关闭</string>
+	<string name="wear_pairing_toast_success">手表已配对</string>
+	<string name="wear_pairing_toast_failure">手表配对失败</string>
+	<string name="wear_pairing_channel_name">手表配对</string>
+	<string name="wear_pairing_notification_title">配对你的手表</string>
+	<string name="wear_pairing_notification_text">点击以让你的手表与 Hammer 账户同步</string>
+</resources>

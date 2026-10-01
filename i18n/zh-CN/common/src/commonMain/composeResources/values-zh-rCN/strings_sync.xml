@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="sync_project_dialog_title">项目同步</string>
+
+	<string name="sync_conflict_scene_title">场景冲突</string>
+	<string name="sync_conflict_scene_draft_title">场景草稿冲突</string>
+	<string name="sync_conflict_note_title">笔记冲突</string>
+	<string name="sync_conflict_timeline_title">时间线事件冲突</string>
+
+	<string name="sync_conflict_timeline_event_missing_date">无日期</string>
+
+	<string name="sync_conflict_tab_local">本地</string>
+	<string name="sync_conflict_tab_remote">远程</string>
+
+	<string name="sync_conflict_header_title">%1$s 冲突</string>
+	<string name="sync_conflict_entity_label_scene">场景</string>
+	<string name="sync_conflict_entity_label_note">笔记</string>
+	<string name="sync_conflict_entity_label_timeline_event">时间线事件</string>
+	<string name="sync_conflict_entity_label_encyclopedia_entry">百科条目</string>
+	<string name="sync_conflict_entity_label_scene_draft">场景草稿</string>
+	<string name="sync_conflict_entity_label_project_data">项目设置</string>
+
+
+	<string
+		name="sync_conflict_merge_explained">你可以直接采用本地或远程副本，也可以手动合并两者：把远程的部分内容复制到本地副本中，然后采用该副本。</string>
+
+
+	<string name="sync_conflict_encyclopedia_title">百科条目冲突</string>
+
+	<string name="project_info_author_label">作者</string>
+	<string name="project_info_theme_section_title">自定义主题</string>
+	<string name="project_info_theme_enable_label">为此项目使用自定义主题</string>
+	<string name="project_info_theme_primary_label">主色</string>
+	<string name="project_info_theme_secondary_label">强调色</string>
+	<string name="project_info_word_goal_section_title">字数目标</string>
+	<string name="project_info_word_goal_enable_label">追踪写作目标</string>
+	<string name="project_info_word_goal_count_label">字数</string>
+	<string name="project_info_word_goal_cadence_label">周期</string>
+	<string name="project_info_word_goal_cadence_day">每天</string>
+	<string name="project_info_word_goal_cadence_week">每周</string>
+	<string name="project_info_word_goal_effective_label">折算为</string>
+	<string name="project_info_word_goal_effective_unit">字 / 天</string>
+	<string name="project_info_tags_section_title">标签</string>
+	<string name="project_info_tags_label">标签</string>
+	<string name="project_info_tags_hint">↵ 添加</string>
+	<string name="project_info_tags_placeholder">奇幻，草稿，连载…</string>
+	<string name="project_info_language_label">语言</string>
+	<string name="project_info_language_unset">未设置</string>
+	<string name="project_info_language_dialog_title">选择语言</string>
+	<string name="project_info_language_dialog_close">关闭</string>
+	<string name="project_info_language_search_hint">搜索语言</string>
+	<string name="project_info_language_clear">清除（设为未设置）</string>
+	<string name="project_info_language_empty">没有匹配的语言</string>
+	<string name="project_info_color_picker_edit">编辑</string>
+	<string name="project_info_color_picker_cancel">取消</string>
+	<string name="project_info_color_picker_confirm">确定</string>
+	<string name="project_settings_breadcrumb_home">主页</string>
+	<string name="project_settings_breadcrumb_root">项目设置</string>
+	<string name="project_settings_autosaved">已自动保存</string>
+	<string name="project_settings_hero_marker">§ 0 · 项目</string>
+	<string name="project_settings_hero_by">由 %1$s</string>
+	<string name="project_settings_hero_no_author">由（未设置作者）</string>
+	<string name="project_settings_spellcheck_section_title">拼写检查</string>
+	<string name="project_settings_spellcheck_mismatch_caption">拼写检查已关闭：项目语言（%1$s）与你的词典（%2$s）不一致。更改其中之一即可重新启用。</string>
+	<string name="project_settings_spellcheck_encyclopedia_enable">在此项目中学习百科名称</string>
+	<string name="project_settings_spellcheck_encyclopedia_enable_hint">关闭以将此项目的条目名称排除在拼写检查词典之外</string>
+	<string name="project_settings_dictionary_label">项目词典</string>
+	<string name="project_settings_dictionary_hint">↵ 添加</string>
+	<string name="project_settings_dictionary_placeholder">拼写检查器在此项目中应接受的词语</string>
+	<string name="project_settings_folio_caption">项目设置 · %1$s</string>
+	<string name="project_settings_folio_section_count">§§ %1$d</string>
+
+	<string name="sync_conflict_project_data_title">项目设置冲突</string>
+	<string name="sync_conflict_project_data_explanation">为每个字段选择一方。本地是你在这台设备上的内容；服务器是从另一台设备同步过来的内容。</string>
+	<string name="sync_conflict_project_data_field_author">作者名称</string>
+	<string name="sync_conflict_project_data_field_theme">项目主题</string>
+	<string name="sync_conflict_project_data_field_word_goal">字数目标</string>
+	<string name="sync_conflict_project_data_field_tags">标签</string>
+	<string name="sync_conflict_project_data_field_language">语言</string>
+	<string name="sync_conflict_project_data_field_dictionary">学习百科名称</string>
+	<string name="sync_conflict_project_data_value_unset">（未设置）</string>
+	<string name="sync_conflict_project_data_value_on">开启</string>
+	<string name="sync_conflict_project_data_value_off">关闭</string>
+	<string name="sync_conflict_project_data_cadence_day">天</string>
+	<string name="sync_conflict_project_data_cadence_week">周</string>
+	<string name="sync_conflict_project_data_dictionary_merged">项目词典中双方的词语都会保留。</string>
+	<string name="sync_conflict_project_data_resolve_button">解决</string>
+
+
+	<string name="sync_conflict_encyclopedia_label_name">名称：</string>
+	<string name="sync_conflict_encyclopedia_label_type">类型：</string>
+	<string name="sync_conflict_encyclopedia_label_image">图片：</string>
+	<string name="sync_conflict_encyclopedia_label_content">正文：</string>
+	<string name="sync_conflict_encyclopedia_label_tags">标签：</string>
+
+	<string name="sync_conflict_encyclopedia_has_image">含图片</string>
+
+	<string name="sync_conflict_title_scene_field_name">名称</string>
+	<string name="sync_conflict_title_scene_field_content">场景正文</string>
+	<string name="sync_conflict_title_scene_field_outline">大纲</string>
+	<string name="sync_conflict_title_scene_field_notes">笔记</string>
+	<string name="sync_conflict_scene_tab_content">正文</string>
+	<string name="sync_conflict_scene_tab_metadata">元数据</string>
+	<string name="sync_conflict_scene_tab_references">引用</string>
+	<string name="sync_conflict_references_confirmed_label">已确认</string>
+	<string name="sync_conflict_references_dismissed_label">已忽略</string>
+	<string name="sync_conflict_references_empty">无</string>
+	<string name="sync_conflict_encyclopedia_label_aliases">别名：</string>
+
+	<string name="sync_conflict_title_scene_draft_field_name">名称</string>
+	<string name="sync_conflict_title_scene_draft_field_content">场景正文</string>
+
+	<string name="sync_conflict_title_note_field_name">笔记正文</string>
+
+	<string name="sync_conflict_title_timeline_event_field_date">日期</string>
+	<string name="sync_conflict_title_timeline_event_field_content">事件正文</string>
+
+	<string name="sync_menu_group">同步</string>
+	<string name="sync_menu_item">开始同步</string>
+
+	<string name="sync_status_in_progress">正在同步...</string>
+	<string name="sync_status_failed">同步失败</string>
+	<string name="sync_status_success">同步完成</string>
+
+
+	<string name="sync_toast_success">项目同步完成</string>
+	<string name="sync_toast_failed">项目同步失败</string>
+
+	<string name="sync_log_account_begin">开始同步</string>
+	<string name="sync_log_account_server_data_loaded">服务器数据已加载</string>
+	<string name="sync_log_account_complete">账号同步完成</string>
+	<string name="sync_log_account_failed">同步项目失败：%1$s</string>
+	<string name="sync_log_account_project_delete_server_success">正在删除服务器项目：ID(%1$s)</string>
+	<string name="sync_log_account_project_delete_server_failure">在服务器上删除项目失败：%1$s</string>
+	<string name="sync_log_account_project_delete_client">正在删除本地项目：%1$s</string>
+
+	<string name="sync_log_account_project_rename_server_success">正在重命名服务器项目：ID(%1$s)</string>
+	<string name="sync_log_account_project_rename_server_failure">在服务器上重命名项目失败：%1$s</string>
+
+	<string name="sync_log_account_project_rename_client_from_server_success">从服务器重命名项目：%1$s</string>
+	<string name="sync_log_account_project_rename_client_from_server_failure">从服务器重命名项目失败：%1$s</string>
+
+	<string name="sync_log_account_project_create_server_success">已在服务器上创建项目：%1$s</string>
+	<string name="sync_log_account_project_create_server_failure">在服务器上创建项目失败：%1$s</string>
+	<string name="sync_log_account_project_id_save_failure">项目已在服务器上创建，但未能将其 ID 保存在本地：%1$s</string>
+	<string name="sync_log_account_project_create_client">已创建本地项目：%1$s</string>
+	<string name="sync_log_account_project_create_client_local">正在设置本地项目的服务器 ID：%1$s</string>
+	<string name="sync_log_account_project_create_local_failure">从服务器创建本地项目失败：%1$s</string>
+	<string name="sync_log_account_project_create_client_name_taken">已跳过服务器项目 %1$s：已存在同名本地项目，且它正与另一个服务器项目同步</string>
+
+	<string name="sync_log_begin_account">正在同步账号...</string>
+	<string name="sync_log_begin_projects">正在同步项目...</string>
+	<string name="sync_log_end_projects">项目同步完成</string>
+	<string name="sync_log_begin_project">正在同步项目：%1$s</string>
+	<string name="sync_log_project_unchanged">无更改，已跳过</string>
+	<string name="sync_log_project_failed">同步失败：%1$s</string>
+
+	<string
+		name="sync_log_project_conflict">项目 %1$s 中存在冲突，请打开该项目并同步以解决它</string>
+
+	<string name="sync_log_client_data_computed">客户端实体数据已计算</string>
+	<string name="sync_log_project_id_stale">服务器上已不再有该项目。它将在你下次同步时重新创建。</string>
+	<string name="sync_log_server_data_loaded">已收到服务器数据</string>
+	<string name="sync_log_client_data_loaded">客户端数据已加载</string>
+	<string name="sync_log_backup_made">已创建本地备份：%1$s</string>
+	<string name="sync_log_entity_download_success">实体 %1$d 已下载</string>
+	<string name="sync_log_entity_download_failed_general">下载实体 %1$d 失败</string>
+	<string name="sync_log_entity_download_failed_not_found">服务器上未找到实体 %1$d</string>
+	<string name="sync_log_entity_download_not_modified">实体 %1$d 未被修改</string>
+	<string name="sync_log_entity_download_rejected_mismatch">拒绝下载实体 %1$d：服务器返回了不匹配的 ID 或类型</string>
+	<string name="sync_log_entity_upload_entity_not_owned">上传实体 %1$d 失败：其类型不属于任何对象，可能已被删除</string>
+	<string name="sync_log_entity_delete_failed">在服务器上删除 ID %1$d 失败：%2$s</string>
+	<string name="sync_log_entity_delete_success">已在服务器上删除 ID %1$d</string>
+	<string
+		name="sync_log_entity_conflict">新实体遇到冲突，这不应该发生！ID：%1$d 类型：%2$s</string>
+	<string name="sync_log_entity_failed">同步失败：%1$s</string>
+	<string name="sync_log_stale_hash_detected">服务器缓存的哈希对实体 %1$d 已过期。将通过强制上传进行修复。</string>
+	<string name="sync_log_stale_hash_healed">已通过强制上传成功修复实体 %1$d 的服务器缓存</string>
+	<string name="sync_log_stale_hash_heal_failed">修复实体 %1$d 的服务器缓存失败 - 强制上传失败</string>
+	<string name="sync_log_entities_transferred">实体已传输</string>
+	<string name="sync_log_finalized">同步已结束</string>
+	<string name="sync_log_data_saved">同步数据已保存</string>
+	<string name="sync_log_data_save_failed">由于出现错误，同步数据未保存</string>
+	<string name="sync_log_failed">结束同步失败</string>
+
+	<string name="sync_draft_rejected_invalid_name">已拒绝来自服务器的草稿 %1$d：草稿名称不安全</string>
+	<string name="sync_encyclopedia_image_rejected_invalid_extension">已跳过来自服务器的百科条目 %1$d 的图片：文件扩展名不安全</string>
+
+	<string name="sync_encyclopedia_deleted">已从客户端删除百科 ID %1$d</string>
+	<string name="sync_note_deleted">已从客户端删除笔记 ID %1$d</string>
+	<string name="sync_draft_deleted">已从客户端删除草稿 %1$d</string>
+	<string name="sync_scene_deleted">已从客户端删除场景 %1$d</string>
+	<string name="sync_scene_delete_failed">从客户端删除场景 %1$d 失败</string>
+	<string name="sync_scene_delete_failed_not_found">未找到要删除的场景：%1$d</string>
+	<string name="sync_event_deleted">已从客户端删除事件 %1$d</string>
+	<string name="sync_event_delete_failed">从客户端删除事件 %1$d 失败</string>
+	<string name="sync_event_delete_failed_not_found">未找到要删除的事件：%1$d</string>
+
+	<string name="sync_scene_creating">正在创建新场景 %1$d</string>
+	<string name="sync_scene_downloading">已下载场景内容：%1$d</string>
+	<string name="sync_scene_moved_parent">已将场景 %1$d 移至新的父级 %2$d</string>
+	<string name="sync_scene_store_content_failed">保存已下载的场景内容失败：%1$d</string>
+
+	<string name="sync_scene_group_creating">正在创建新分组 %1$d</string>
+	<string name="sync_scene_group_downloading">已下载场景内容：%1$d</string>
+	<string name="sync_scene_group_moved_parent">已将场景 %1$d 移至新的父级 %2$d</string>
+
+	<string name="sync_unauthorized">未授权</string>
+	<string name="sync_general_error">未处理的服务器错误</string>
+
+	<string name="protocol_mismatch_section">需要更新</string>
+	<string name="protocol_mismatch_title_client">你的应用已过期</string>
+	<string name="protocol_mismatch_title_server">同步服务器已过期</string>
+	<string name="protocol_mismatch_body_client">此版本的 Hammer 已无法与服务器同步。请更新到最新版本以继续同步你的作品。</string>
+	<string name="protocol_mismatch_body_server">同步服务器运行的协议版本比此应用更旧。服务器需要先更新，同步才能恢复工作。</string>
+	<string name="protocol_mismatch_latest_version">最新版本：%s</string>
+	<string name="protocol_mismatch_current_version">你当前使用：%s</string>
+	<string name="protocol_mismatch_open_release_button">获取更新</string>
+	<string name="protocol_mismatch_dismiss_button">忽略</string>
+
+	<string name="reauth_title">重新授权</string>
+	<string name="reauth_explanation">你的令牌已过期，请重新与同步服务器授权。</string>
+	<string name="reauth_token_expired">令牌已过期</string>
+	<string name="reauth_server_url">地址</string>
+	<string name="reauth_server_email">电子邮件</string>
+
+	<string name="server_setup_help_title">关于同步服务器</string>
+	<string
+		name="server_setup_help_intro">Hammer 的同步服务器让你可以在多个设备上处理你的项目。你配置到同一服务器的所有设备之间都会同步你的工作。</string>
+	<string name="server_setup_help_official_header">官方服务器</string>
+	<string
+		name="server_setup_help_official_body">你可以运行自己的同步服务器，但如果这太技术化，或者你只是想支持这个项目，我们在 hammer.ink 提供了一个官方服务器。</string>
+	<string
+		name="server_setup_help_patreon">如果你订阅我们的 Patreon，就能使用官方服务器。这是支持本项目最好的方式。</string>
+	<string name="server_setup_help_patreon_link">Patreon</string>
+	<string name="server_setup_help_hammer_link">Hammer.Ink</string>
+	<string name="server_setup_help_registration_header">注册</string>
+	<string
+		name="server_setup_help_registration_body">服务器已关闭注册，也就是说，你需要在创建账号之前让服务器管理员把你加入服务器的允许用户列表。</string>
+	<string name="server_setup_help_setup_header">设置</string>
+	<string name="server_setup_help_setup_step1">输入服务器地址，官方服务器为「hammer.ink」。</string>
+	<string
+		name="server_setup_help_setup_step2">输入你的电子邮件和密码，然后点击「创建」以创建账号。</string>
+	<string name="server_setup_help_setup_step3">之后在其他设备上，你只需点击「登录」。</string>
+	<string name="server_setup_help_note_header">重要提示</string>
+	<string
+		name="server_setup_help_note_body">Hammer 中的同步与 Google Docs 这类在线优先的应用不同。同步不是实时的，通常在你打开或关闭应用时进行。离线之前请确保已同步到项目的最新版本。Hammer 会自动同步，但如果你要离线一段时间，检查一下总是好的。</string>
+	<string name="server_setup_help_dismiss_button">知道了</string>
+</resources>

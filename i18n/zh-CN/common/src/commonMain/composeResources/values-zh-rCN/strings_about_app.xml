@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="about_description">一个用于创作故事的简单工具。</string>
+
+	<string name="about_studio_header">工作室</string>
+	<string name="about_community_studio_attribution">Hammer 由 Dark Rock Studios 打造，同时还提供一系列同样注重隐私的开源应用。</string>
+
+	<string name="about_community_header">社区</string>
+	<string name="about_community_discord_link">Discord</string>
+	<string name="about_community_reddit_link">Reddit</string>
+	<string name="about_community_github_link">Github</string>
+
+	<string name="about_attribution_header">鸣谢</string>
+	<string name="about_attribution_libraries_button">开源库</string>
+	<string name="about_attribution_studio_button">Dark Rock Studios</string>
+
+	<string name="about_version_changes_button">更新内容</string>
+	<string name="about_version_github_button">GitHub Release</string>
+
+	<string name="changelog_dialog_title">本次更新</string>
+	<string name="update_dialog_release_notes_section">更新说明</string>
+	<string name="update_dialog_release_notes_empty">未提供更新说明。</string>
+	<string name="update_dialog_open_release_button">打开发布页</string>
+
+	<string name="about_logs_header">应用日志</string>
+	<string name="about_logs_directory_label">日志目录：</string>
+	<string name="about_logs_export_button">导出日志</string>
+	<string name="about_logs_no_logs">未找到日志文件</string>
+	<string name="about_logs_open_tooltip">打开日志目录</string>
+	<string name="about_logs_export_success">日志已导出。</string>
+	<string name="about_logs_export_failed">无法导出日志。请查看日志目录。</string>
+	<string name="about_logs_copy_diagnostics_button">复制诊断信息</string>
+	<string name="about_logs_copy_diagnostics_success">诊断信息已复制到剪贴板。</string>
+	<string name="about_logs_copy_diagnostics_failed">无法复制诊断信息。</string>
+</resources>
